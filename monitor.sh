@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "CPu USAGE: "
+echo "CPU USAGE: "
 echo "$var1 $var2"
 top -b -n 1 | head -n 5
 
@@ -27,3 +27,11 @@ $var2"
 echo "MEMORY USAGE PER-PROCESS: "
 echo "$var1 $var2"
 ps aux --sort=-%mem | head -n 10
+
+echo "$var1
+
+$var2"
+
+echo "DISK STORAGE: "
+echo "$var1 $var2"
+df -h
