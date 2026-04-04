@@ -1,6 +1,29 @@
 #!/bin/bash
-echo "CPU usage: "
-top -bn1 | head -n 5
+echo "CPu USAGE: "
+echo "$var1 $var2"
+top -b -n 1 | head -n 5
 
-echo " per-process CPU usage: "
+echo "$var1
+
+$var2"
+
+echo "PER-PROCESS CPU USAGE: "
+echo "$var1 $var2"
 top -b -o %CPU | head -n 10
+
+
+echo "$var1
+
+$var2"
+
+echo "VIRTUAL MEMORY USAGE: "
+echo "$var1 $var2"
+vmstat
+
+echo "$var1
+
+$var2"
+
+echo "MEMORY USAGE PER-PROCESS: "
+echo "$var1 $var2"
+ps aux --sort=-%mem | head -n 10
