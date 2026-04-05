@@ -35,3 +35,19 @@ $var2"
 echo "DISK STORAGE: "
 echo "$var1 $var2"
 df -h
+
+echo "$var1
+
+$var2"
+
+echo "ACTIVE CONNECTIONS: "
+echo "$var1 $var2"
+netstat -a | head -n 10
+
+echo "$var1
+
+$var2"
+
+echo "LATENCY AND PACKET LOSS: "
+echo "$var1 $var2"
+ping -c 20 8.8.8.8 | tail -n 2
