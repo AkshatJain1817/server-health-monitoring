@@ -1,4 +1,7 @@
 #!/bin/bash
+exec > >(tee "output_$(date +%F_%H-%M-%S).txt") 2>&1
+set -e
+
 echo "CPU USAGE: "
 echo "$var1 $var2"
 top -b -n 1 | head -n 5
